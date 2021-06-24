@@ -4,7 +4,7 @@
             "about": "",
             "ace_theme": "github",
             "current_contest": null,
-            "display_rank": "admin",
+            "display_rank": "superadmin",
             "ip": "10.0.2.2",
             "language": 1,
             "last_access": "2017-12-02T08:57:10.093Z",
@@ -37,11 +37,11 @@
             "is_superuser": true,
             "last_login": "2017-12-02T08:34:31.840Z",
             "last_name": "",
-            "password": "pbkdf2_sha256$36000$eFRRZq4DgktS$md1gk0bBJb7PH/+3YEXkcCW8K+KmiI+y/amqR32G2DY=",
+            "password": "pbkdf2_sha256$150000$bLk1WJhY8cQ5$HLrxouPeyc/P+63kHktTlpH8QJ9asTHNFlIQcEkTbm4=",
             "user_permissions": [
 
             ],
-            "username": "admin"
+            "username": "superadmin"
         },
         "model": "auth.user",
         "pk": 1

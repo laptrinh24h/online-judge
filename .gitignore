@@ -13,3 +13,12 @@ resources/ranks.css
 resources/table.css
 resources/martor-description.css
 sass_processed
+logs
+*.log
+.venv
+env
+venv
+*.env
+!settings/example.env
+.pm2
+tests

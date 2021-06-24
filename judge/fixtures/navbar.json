@@ -2,7 +2,7 @@
     {
         "fields": {
             "key": "problems",
-            "label": "Problems",
+            "label": "Đề bài",
             "level": 0,
             "lft": 1,
             "order": 1,
@@ -18,7 +18,7 @@
     {
         "fields": {
             "key": "submit",
-            "label": "Submissions",
+            "label": "Các bài nộp",
             "level": 0,
             "lft": 1,
             "order": 2,
@@ -34,7 +34,7 @@
     {
         "fields": {
             "key": "user",
-            "label": "Users",
+            "label": "Xếp hạng",
             "level": 0,
             "lft": 1,
             "order": 3,
@@ -50,7 +50,7 @@
     {
         "fields": {
             "key": "contest",
-            "label": "Contests",
+            "label": "Lớp học",
             "level": 0,
             "lft": 1,
             "order": 5,
@@ -66,7 +66,7 @@
     {
         "fields": {
             "key": "about",
-            "label": "About",
+            "label": "Giới thiệu",
             "level": 0,
             "lft": 1,
             "order": 6,
@@ -78,21 +78,5 @@
         },
         "model": "judge.navigationbar",
         "pk": 6
-    },
-    {
-        "fields": {
-            "key": "status",
-            "label": "Status",
-            "level": 1,
-            "lft": 2,
-            "order": 7,
-            "parent": 6,
-            "path": "/status/",
-            "regex": "^/status/$|^/judge/",
-            "rght": 3,
-            "tree_id": 5
-        },
-        "model": "judge.navigationbar",
-        "pk": 7
     }
 ]
