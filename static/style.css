@@ -2075,8 +2075,8 @@ ul.pagination > li > a, ul.pagination > li > span {
   text-decoration: none;
   color: #000000;
   /*background-color: #3b3b3b;*/
-  background-image: linear-gradient(to right, #3e89fa, #4e00cc);
-  border: 1px solid transparent;
+  /*background-image: linear-gradient(to right, #3e89fa, #4e00cc);*/
+  border: 1px solid #8080802b;
   margin-left: -1px;
 }
 ul.pagination > .disabled-page > a {
