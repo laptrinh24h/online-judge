@@ -160,13 +160,5 @@
         },
         "model": "judge.comment",
         "pk": 1
-    },
-    {
-        "fields": {
-            "domain": "localhost:8081",
-            "name": "DMOJ: Modern Online Judge"
-        },
-        "model": "sites.site",
-        "pk": 1
     }
 ]
