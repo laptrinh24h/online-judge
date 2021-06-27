@@ -23,7 +23,7 @@ from judge.views.register import ActivationView, RegistrationView
 from judge.views.select2 import AssigneeSelect2View, CommentSelect2View, ContestSelect2View, \
     ContestUserSearchSelect2View, OrganizationSelect2View, ProblemSelect2View, TicketUserSelect2View, \
     UserSearchSelect2View, UserSelect2View
-from judge.views.widgets import martor_image_uploader
+from judge.views.widgets import martor_image_uploader, mator_image_view
 
 admin.autodiscover()
 
@@ -326,6 +326,12 @@ urlpatterns = [
             path('search-user', markdown_search_user, name='martor_search_user'),
         ])),
     ])),
+
+    url(r'^martor/(?P<slug>\S*)', include([
+        url(r'^$', mator_image_view, name='mator_image_view'),
+    ]))
+    if settings.DEBUG else
+    url(r'^martor/(?P<slug>\S*)', include([])),
 
     url(r'^feed/', include([
         url(r'^problems/rss/$', ProblemFeed(), name='problem_rss'),

@@ -174,6 +174,11 @@ class Problem(models.Model):
     submission_source_visibility_mode = models.CharField(verbose_name=_('submission source visibility'), max_length=1,
                                                          default=SubmissionSourceAccess.FOLLOW,
                                                          choices=SUBMISSION_SOURCE_ACCESS)
+    PRICING_FREE = 1
+    PRICING_PREM = 2
+    PRICING_PLUS = 3
+    PRICING_CHOICES = ((PRICING_FREE, 'Free'), (PRICING_PREM, 'Premium'), (PRICING_PLUS, 'Premium+'))
+    pricing = models.SmallIntegerField(verbose_name=_('Pricing'), default=1, choices=PRICING_CHOICES)
 
     objects = TranslatedProblemQuerySet.as_manager()
     tickets = GenericRelation('Ticket')
@@ -207,7 +212,7 @@ class Problem(models.Model):
             (user.profile.id in self.editor_ids or
                 self.is_organization_private and self.organizations.filter(admins=user.profile).exists())
 
-    def is_accessible_by(self, user, skip_contest_problem_check=False):
+    def is_accessible_by(self, user, skip_contest_problem_check=False, **kwargs):
         # If we don't want to check if the user is in a contest containing that problem.
         if not skip_contest_problem_check and user.is_authenticated:
             # If user is currently in a contest containing that problem.
@@ -219,6 +224,15 @@ class Problem(models.Model):
 
         # Problem is public.
         if self.is_public:
+            if self.pricing == self.PRICING_PREM:
+                if hasattr(user, 'profile') and user.profile.pricing != self.PRICING_FREE:
+                    return True
+                return False
+            if self.pricing == self.PRICING_PLUS:
+                if kwargs.get('view_only', False):
+                    return True
+                return False
+
             # Problem is not private to an organization.
             if not self.is_organization_private:
                 return True

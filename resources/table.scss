@@ -30,6 +30,9 @@
         border-width: 1px 1px 1px 0;
     }
 
+    thead tr {
+        background-image: $linear_blue;
+    }
     thead th {
         vertical-align: middle;
 
@@ -45,8 +48,8 @@
     th {
         height: 2em;
         color: #FFF;
-        background-color: $widget_black;
-        border-color: #555;
+        background-color: transparent;
+        border-color: transparent;
         border-width: 1px 1px 0 0;
         border-style: solid;
         padding: 4px 10px;

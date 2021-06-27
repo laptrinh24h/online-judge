@@ -10,7 +10,8 @@
 # SECURITY WARNING: keep the secret key used in production secret!
 # You may use <http://www.miniwebtool.com/django-secret-key-generator/>
 # to generate this key.
-SECRET_KEY = 'This key is not very secure and you should change it.'
+import os
+SECRET_KEY = 'hjkhjfyhdudf'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True  # Change to False once you are done with runserver testing.
@@ -53,7 +54,7 @@ DATABASES = {
 
 # Internationalization.
 # Documentation: <https://docs.djangoproject.com/en/1.11/topics/i18n/>
-LANGUAGE_CODE = 'en-ca'
+LANGUAGE_CODE = 'en'
 DEFAULT_USER_TIME_ZONE = 'America/Toronto'
 USE_I18N = True
 USE_L10N = True
@@ -83,12 +84,16 @@ STATICFILES_FINDERS += ('compressor.finders.CompressorFinder',)
 
 # The following block is included for your convenience, if you want
 # to use Gmail.
-#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-#EMAIL_USE_TLS = True
-#EMAIL_HOST = 'smtp.gmail.com'
-#EMAIL_HOST_USER = '<your account>@gmail.com'
-#EMAIL_HOST_PASSWORD = '<your password>'
-#EMAIL_PORT = 587
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'noreply.laptrinh24h@gmail.com'
+EMAIL_HOST_PASSWORD = ''
+EMAIL_PORT = 587
+
+# REGISTRATION_EMAIL_SUBJECT_PREFIX = '[Registration]'
+# SEND_ACTIVATION_EMAIL = False
+# REGISTRATION_AUTO_LOGIN = True
 
 # To use Mailgun, uncomment this block.
 # You will need to run `pip install django-mailgun` for to get `MailgunBackend`.
@@ -106,11 +111,11 @@ STATICFILES_FINDERS += ('compressor.finders.CompressorFinder',)
 # A tuple of (name, email) pairs that specifies those who will be mailed
 # when the server experiences an error when DEBUG = False.
 ADMINS = (
-    ('Your Name', 'your.email@example.com'),
+    ('laptrinh24h', 'laptrinh24h.github@gmail.com'),
 )
 
 # The sender for the aforementioned emails.
-SERVER_EMAIL = 'DMOJ: Modern Online Judge <errors@dmoj.ca>'
+SERVER_EMAIL = 'laptrinh24h.github@gmail.com'
 
 
 ##################################################
@@ -135,10 +140,10 @@ STATIC_ROOT = './static'
 ############################################
 
 ## DMOJ site display settings.
-SITE_NAME = 'DMOJ'
-SITE_LONG_NAME = 'DMOJ: Modern Online Judge'
-SITE_ADMIN_EMAIL = 'admin@example.com'
-TERMS_OF_SERVICE_URL = '//dmoj.ca/tos' # Use a flatpage.
+SITE_NAME = 'laptrinh24h.vn'
+SITE_LONG_NAME = 'Lap trinh 24h'
+SITE_ADMIN_EMAIL = 'laptrinh24h.github@gmail.com'
+# TERMS_OF_SERVICE_URL = '//dmoj.ca/tos' # Use a flatpage.
 
 ## Bridge controls.
 # The judge connection address and port; where the judges will connect to the site.
@@ -264,14 +269,14 @@ LOGGING = {
     },
     'handlers': {
         # You may use this handler as example for logging to other files..
-        'bridge': {
-            'level': 'INFO',
-            'class': 'logging.handlers.RotatingFileHandler',
-            'filename': '<desired bridge log path>',
-            'maxBytes': 10 * 1024 * 1024,
-            'backupCount': 10,
-            'formatter': 'file',
-        },
+        # 'bridge': {
+        #     'level': 'INFO',
+        #     'class': 'logging.handlers.RotatingFileHandler',
+        #     'filename': './logs',
+        #     'maxBytes': 10 * 1024 * 1024,
+        #     'backupCount': 10,
+        #     'formatter': 'file',
+        # },
         'mail_admins': {
             'level': 'ERROR',
             'class': 'dmoj.throttle_mail.ThrottledEmailHandler',
@@ -291,7 +296,7 @@ LOGGING = {
         },
         # Judging logs as received by bridged.
         'judge.bridge': {
-            'handlers': ['bridge', 'mail_admins'],
+            'handlers': ['mail_admins'],  # 'bridge',
             'level': 'INFO',
             'propagate': True,
         },

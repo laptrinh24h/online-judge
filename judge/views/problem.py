@@ -59,7 +59,8 @@ class ProblemMixin(object):
 
     def get_object(self, queryset=None):
         problem = super(ProblemMixin, self).get_object(queryset)
-        if not problem.is_accessible_by(self.request.user):
+        view_only = len(self.request.path.split('/')) == 3
+        if not problem.is_accessible_by(self.request.user, view_only=view_only):
             raise Http404()
         return problem
 

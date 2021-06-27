@@ -24,4 +24,4 @@ venv
 tests
 data/problems
 !data/problems/__init__.py
-test
+/martor/

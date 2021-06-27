@@ -142,6 +142,11 @@ class Profile(models.Model):
                              help_text=_('Notes for administrators regarding this user.'))
     data_last_downloaded = models.DateTimeField(verbose_name=_('last data download time'), null=True, blank=True)
 
+    PRICING_FREE = 1
+    PRICING_PREM = 2
+    PRICING_CHOICES = ((PRICING_FREE, 'Free'), (PRICING_PREM, 'Premium'))
+    pricing = models.SmallIntegerField(verbose_name=_('Pricing'), default=1, choices=PRICING_CHOICES)
+
     @cached_property
     def organization(self):
         # We do this to take advantage of prefetch_related

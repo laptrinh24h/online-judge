@@ -223,8 +223,8 @@ header {
 }
 
 #nav-container {
-    background: $widget_black;
-
+    //background: $widget_black;
+    background-image: $linear_blue;
     // opacity: 0.77
     // filter: alpha(opacity=77)
     height: 100%;
@@ -263,7 +263,7 @@ nav {
 
             &.home-nav-element a {
                 padding: 0;
-                height: 44px;
+                height: 54px;
 
                 &:hover {
                     border-bottom: none;
@@ -306,7 +306,8 @@ nav {
                 left: 5px;
                 display: none;
                 color: #fff;
-                background: $widget_black;
+                //background: $widget_black;
+                background-image: $linear_blue;
                 margin: 0 !important;
                 box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 
@@ -328,6 +329,7 @@ nav {
                         display: block;
                         border-left: 4px solid $highlight_blue;
                         white-space: nowrap;
+                        background: #fafafa59;
                     }
                 }
             }
@@ -595,7 +597,8 @@ math {
         border-left: 4px solid $highlight_blue;
         position: fixed;
         top: 36px;
-        background: $widget_black;
+        //background: $widget_black;
+        background-image: $linear_blue;
         bottom: 0;
         width: 8em;
         left: 0;

@@ -207,7 +207,8 @@ header {
 }
 
 #nav-container {
-  background: #3b3b3b;
+  /*background: #3b3b3b;*/
+  background-image: linear-gradient(to right, #3e89fa, #4e00cc);
   height: 100%;
 }
 
@@ -244,7 +245,7 @@ nav ul li {
 }
 nav ul li.home-nav-element a {
   padding: 0;
-  height: 44px;
+  height: 54px;
 }
 nav ul li.home-nav-element a:hover {
   border-bottom: none;
@@ -269,7 +270,7 @@ nav ul li a:hover, nav ul li button:hover {
 }
 nav ul li a.active, nav ul li button.active {
   color: #FFF;
-  background: #2980B9;
+  background: #fafafa59;
 }
 nav ul li a .nav-expand, nav ul li button .nav-expand {
   display: none;
@@ -280,7 +281,8 @@ nav ul li ul {
   left: 5px;
   display: none;
   color: #fff;
-  background: #3b3b3b;
+  /*background: #3b3b3b;*/
+  background-image: linear-gradient(to right, #3e89fa, #4e00cc);
   margin: 0 !important;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
@@ -544,7 +546,8 @@ math {
     border-left: 4px solid #2980B9;
     position: fixed;
     top: 36px;
-    background: #3b3b3b;
+    /*background: #3b3b3b;*/
+    background-image: linear-gradient(to right, #3e89fa, #4e00cc);
     bottom: 0;
     width: 8em;
     left: 0;
@@ -632,6 +635,9 @@ math {
 .table tr:last-child td:first-child {
   border: 1px solid #ccc;
 }
+.table thead tr {
+  background-image: linear-gradient(to right, #3e89fa, #4e00cc);
+}
 .table thead th {
   vertical-align: middle;
 }
@@ -644,8 +650,8 @@ math {
 .table th {
   height: 2em;
   color: #FFF;
-  background-color: #3b3b3b;
-  border-color: #555;
+  background-color: transparent;
+  border-color: transparent;
   border-width: 1px 1px 0 0;
   border-style: solid;
   padding: 4px 10px;
@@ -894,7 +900,18 @@ img.inline-math {
   text-align: left;
   padding-left: 1em;
   width: 100%;
+  color: limegreen;
 }
+#problem-table td.pricing1 {
+  color: limegreen;
+}
+#problem-table td.pricing2 {
+  color: red;
+}
+#problem-table td.pricing3 {
+  color: orange;
+}
+
 #problem-table td.pp {
   text-align: left;
   padding-left: 1em;
@@ -2067,9 +2084,10 @@ ul.pagination > li > a, ul.pagination > li > span {
   padding: 4px 12px;
   line-height: 1.42857;
   text-decoration: none;
-  color: #FFF;
-  background-color: #3b3b3b;
-  border: 1px solid #505050;
+  color: #000000;
+  /*background-color: #3b3b3b;*/
+  /*background-image: linear-gradient(to right, #3e89fa, #4e00cc);*/
+  border: 1px solid #8080802b;
   margin-left: -1px;
 }
 ul.pagination > .disabled-page > a {
@@ -2078,14 +2096,15 @@ ul.pagination > .disabled-page > a {
   border-color: #282828;
 }
 ul.pagination > .disabled-page > span {
-  color: #888;
-  background-color: #3b3b3b;
-  border-color: #505050;
+  /*color: #888;*/
+  /*background-color: #3b3b3b;*/
+  /*border-color: #505050;*/
 }
 ul.pagination > .active-page > a {
   z-index: 2;
   color: #FFF;
-  background-color: #2980B9;
+  /*background-color: #2980B9;*/
+  background-image: linear-gradient(to right, #3e89fa, #4e00cc);
   border-color: transparent;
   cursor: default;
 }
@@ -2201,7 +2220,7 @@ ul.select2-selection__rendered {
 
 .sidebox h3 {
   margin: 0 -5px;
-  background: #3b3b3b;
+  background-image: linear-gradient(to right, #3e89fa, #4e00cc);
   border-radius: 4px 4px 0 0;
   color: white;
   padding-top: 5px;

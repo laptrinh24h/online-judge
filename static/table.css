@@ -17,6 +17,9 @@
   border-color: #ccc;
   border-width: 1px 1px 0 1px;
 }
+.table thead tr {
+  background-image: linear-gradient(to right, #3e89fa, #4e00cc);
+}
 .table tr:last-child td {
   border-color: #ccc;
   border-width: 1px 1px 1px 0;
@@ -36,8 +39,8 @@
 .table th {
   height: 2em;
   color: #FFF;
-  background-color: #3b3b3b;
-  border-color: #555;
+  background-color: transparent;
+  border-color: transparent;
   border-width: 1px 1px 0 0;
   border-style: solid;
   padding: 4px 10px;

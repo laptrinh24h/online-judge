@@ -134,7 +134,7 @@
         <form id="edit-form" action="" method="post" class="form-area">
             {% csrf_token %}
 
-            <div class="block-header">{{ _('Username') }}</div>
+            <div class="block-header" style="width: 50vh">{{ _('Username') }}</div>
             <span class="fullwidth{% if form.username.errors %}-error{% endif %}">{{ form.username }}</span>
             {% if form.username.errors %}
                 <div class="form-field-error">{{ form.username.errors }}</div>
@@ -181,8 +181,8 @@
             <div class="block-header">{{ _('Default language') }}</div>
             <span class="fullwidth">{{ form.language }}</span>
 
-            <div class="block-header">{{ _('Affiliated organizations') }}</div>
-            {{ form.organizations }}
+{#            <div class="block-header">{{ _('Affiliated organizations') }}</div>#}
+{#            {{ form.organizations }}#}
 
             {% if form.newsletter %}
                 <div style="padding-top: 0.5em;">{{ form.newsletter }}

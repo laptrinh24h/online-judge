@@ -78,5 +78,98 @@
         },
         "model": "judge.navigationbar",
         "pk": 6
+    },
+    {
+        "fields": {
+            "key": "courses",
+            "label": "Khoá học",
+            "level": 0,
+            "lft": 1,
+            "order": 7,
+            "parent": null,
+            "path": "/courses/",
+            "regex": "^/courses/$",
+            "rght": 2,
+            "tree_id": 6
+        },
+        "model": "judge.navigationbar",
+        "pk": 7
+    },
+    {
+        "fields": {
+            "key": "hunt",
+            "label": "Tuyển dụng",
+            "level": 0,
+            "lft": 1,
+            "order": 8,
+            "parent": null,
+            "path": "/hunt/",
+            "regex": "^/hunt/$",
+            "rght": 2,
+            "tree_id": 7
+        },
+        "model": "judge.navigationbar",
+        "pk": 8
+    },
+    {
+        "fields": {
+            "key": "books",
+            "label": "Sách",
+            "level": 0,
+            "lft": 1,
+            "order": 9,
+            "parent": null,
+            "path": "/books/",
+            "regex": "^/books/$",
+            "rght": 2,
+            "tree_id": 8
+        },
+        "model": "judge.navigationbar",
+        "pk": 9
+    },
+    {
+        "fields": {
+            "domain": "localhost:8000",
+            "name": "Lập trình 24h"
+        },
+        "model": "sites.site",
+        "pk": 1
+    },
+    {
+        "fields": {
+            "site_id": 1,
+            "old_path": "/courses/",
+            "new_path": "http://google.com.vn"
+        },
+        "model": "redirects.redirect",
+        "pk": 1
+    },
+    {
+        "fields": {
+            "site_id": 1,
+            "old_path": "/hunt/",
+            "new_path": "http://google.com.vn"
+        },
+        "model": "redirects.redirect",
+        "pk": 2
+    },
+    {
+        "fields": {
+            "site_id": 1,
+            "old_path": "/books/",
+            "new_path": "http://google.com.vn"
+        },
+        "model": "redirects.redirect",
+        "pk": 3
+    },
+    {
+        "fields": {
+            "url": "/about/",
+            "title": "about",
+            "content": "about about about about about about about",
+            "sites": [1]
+        },
+        "model": "flatpages.flatpage",
+        "pk": 1
     }
 ]
