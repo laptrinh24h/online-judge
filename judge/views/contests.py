@@ -567,6 +567,10 @@ ContestRankingProfile = namedtuple(
     'id user css_class username points cumtime tiebreaker organization participation '
     'participation_rating problem_cells result_cell',
 )
+_ContestRankingProfile = namedtuple(
+    'ContestRankingProfile',
+    ContestRankingProfile._fields + ('bg_color', ),
+)
 
 BestSolutionData = namedtuple('BestSolutionData', 'code points time state is_pretested')
 
@@ -608,14 +612,15 @@ def contest_ranking_list(contest, problems):
                                      .order_by('is_disqualified', '-score', 'cumtime', 'tiebreaker'))
 
 
-def get_user_with_bg_color(user):
-    rank = user[0]
+def get_user_with_bg_color(item):
+    rank, user = item
     bg_color = 'white'
     if rank in range(1, 4):
         bg_color = 'limegreen'
     if rank in range(4, 20):
         bg_color = 'yellow'
-    return user + (bg_color, )
+    user = _ContestRankingProfile(*user, bg_color=bg_color)
+    return [rank, user]
 
 
 def get_contest_ranking_list(request, contest, participation=None, ranking_list=contest_ranking_list,

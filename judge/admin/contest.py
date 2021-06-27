@@ -88,7 +88,7 @@ class ContestForm(ModelForm):
             else:
                 self.fields['rate_exclude'].queryset = Profile.objects.none()
         self.fields['banned_users'].widget.can_add_related = False
-        self.fields['view_contest_scoreboard'].widget.can_add_related = False
+        # self.fields['view_contest_scoreboard'].widget.can_add_related = False
 
     def clean(self):
         cleaned_data = super(ContestForm, self).clean()
@@ -105,8 +105,8 @@ class ContestForm(ModelForm):
             'tags': AdminSelect2MultipleWidget,
             'banned_users': AdminHeavySelect2MultipleWidget(data_view='profile_select2',
                                                             attrs={'style': 'width: 100%'}),
-            'view_contest_scoreboard': AdminHeavySelect2MultipleWidget(data_view='profile_select2',
-                                                                       attrs={'style': 'width: 100%'}),
+            # 'view_contest_scoreboard': AdminHeavySelect2MultipleWidget(data_view='profile_select2',
+            #                                                            attrs={'style': 'width: 100%'}),
             'description': AdminMartorWidget(attrs={'data-markdownfy-url': reverse_lazy('contest_preview')}),
         }
 
@@ -121,8 +121,9 @@ class ContestAdmin(NoBatchDeleteMixin, VersionAdmin):
         (_('Details'), {'fields': ('description', 'og_image', 'logo_override_image', 'tags', 'summary')}),
         (_('Format'), {'fields': ('format_name', 'format_config', 'problem_label_script')}),
         (_('Rating'), {'fields': ('is_rated', 'rate_all', 'rating_floor', 'rating_ceiling', 'rate_exclude')}),
-        (_('Access'), {'fields': ('access_code', 'is_private', 'private_contestants', 'is_organization_private',
-                                  'organizations', 'view_contest_scoreboard')}),
+        # (_('Access'), {'fields': ('access_code', 'is_private', 'private_contestants', 'is_organization_private',
+        #                           'organizations', 'view_contest_scoreboard')}),
+        (_('Access'), {'fields': ('is_private', 'private_contestants')}),
         (_('Justice'), {'fields': ('banned_users',)}),
     )
     list_display = ('key', 'name', 'is_visible', 'is_rated', 'locked_after', 'start_time', 'end_time', 'time_limit',
