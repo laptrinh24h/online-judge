@@ -608,6 +608,16 @@ def contest_ranking_list(contest, problems):
                                      .order_by('is_disqualified', '-score', 'cumtime', 'tiebreaker'))
 
 
+def get_user_with_bg_color(user):
+    rank = user[0]
+    bg_color = 'white'
+    if rank in range(1, 4):
+        bg_color = 'limegreen'
+    if rank in range(4, 20):
+        bg_color = 'yellow'
+    return user + (bg_color, )
+
+
 def get_contest_ranking_list(request, contest, participation=None, ranking_list=contest_ranking_list,
                              show_current_virtual=True, ranker=ranker):
     problems = list(contest.contest_problems.select_related('problem').defer('problem__description').order_by('order'))
@@ -621,6 +631,7 @@ def get_contest_ranking_list(request, contest, participation=None, ranking_list=
                 participation = None
         if participation is not None and participation.virtual:
             users = chain([('-', make_contest_ranking_profile(contest, participation, problems))], users)
+    users = list(map(lambda item: get_user_with_bg_color(item), users))
     return users, problems
 
 

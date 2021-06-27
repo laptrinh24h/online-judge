@@ -1598,6 +1598,7 @@ a.edit-profile {
 .content-description {
   line-height: 1.5em;
   font-size: 1em;
+  margin-left: 2em;
   font-family: "Segoe UI", "Lucida Grande", Arial, sans-serif;
 }
 .content-description p {

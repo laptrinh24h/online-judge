@@ -31,8 +31,8 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 SITE_ID = 1
-SITE_NAME = 'DMOJ'
-SITE_LONG_NAME = 'DMOJ: Modern Online Judge'
+SITE_NAME = 'laptrinh24h.vn'
+SITE_LONG_NAME = 'Lập Trình 24h'
 SITE_ADMIN_EMAIL = False
 
 DMOJ_REQUIRE_STAFF_2FA = True
@@ -57,7 +57,7 @@ DMOJ_CAMO_URL = None
 DMOJ_CAMO_KEY = None
 DMOJ_CAMO_HTTPS = False
 DMOJ_CAMO_EXCLUDE = ()
-DMOJ_PROBLEM_DATA_ROOT = None
+DMOJ_PROBLEM_DATA_ROOT = './data/problems'
 DMOJ_PROBLEM_MIN_TIME_LIMIT = 0  # seconds
 DMOJ_PROBLEM_MAX_TIME_LIMIT = 60  # seconds
 DMOJ_PROBLEM_MIN_MEMORY_LIMIT = 0  # kilobytes
@@ -362,23 +362,23 @@ LOCALE_PATHS = [
 ]
 
 LANGUAGES = [
-    ('ca', _('Catalan')),
-    ('de', _('German')),
-    ('en', _('English')),
-    ('es', _('Spanish')),
-    ('fr', _('French')),
-    ('hr', _('Croatian')),
-    ('hu', _('Hungarian')),
-    ('ja', _('Japanese')),
-    ('ko', _('Korean')),
-    ('pt', _('Brazilian Portuguese')),
-    ('ro', _('Romanian')),
-    ('ru', _('Russian')),
-    ('sr-latn', _('Serbian (Latin)')),
-    ('tr', _('Turkish')),
+    # ('ca', _('Catalan')),
+    # ('de', _('German')),
+    # ('en', _('English')),
+    # ('es', _('Spanish')),
+    # ('fr', _('French')),
+    # ('hr', _('Croatian')),
+    # ('hu', _('Hungarian')),
+    # ('ja', _('Japanese')),
+    # ('ko', _('Korean')),
+    # ('pt', _('Brazilian Portuguese')),
+    # ('ro', _('Romanian')),
+    # ('ru', _('Russian')),
+    # ('sr-latn', _('Serbian (Latin)')),
+    # ('tr', _('Turkish')),
     ('vi', _('Vietnamese')),
-    ('zh-hans', _('Simplified Chinese')),
-    ('zh-hant', _('Traditional Chinese')),
+    # ('zh-hans', _('Simplified Chinese')),
+    # ('zh-hant', _('Traditional Chinese')),
 ]
 
 BLEACH_USER_SAFE_TAGS = [

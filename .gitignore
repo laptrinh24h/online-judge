@@ -19,6 +19,9 @@ logs
 env
 venv
 *.env
-!settings/example.env
-.pm2
+.pm2/*
+!.pm2/__init__.py
 tests
+data/problems
+!data/problems/__init__.py
+test
