@@ -115,7 +115,7 @@ msgstr "Trang liên kết"
 
 #: judge/admin/contest.py:31
 msgid "Included contests"
-msgstr "Các cuộc thi"
+msgstr "Các lớp học"
 
 #: judge/admin/contest.py:65 templates/contest/contest.html:83
 #: templates/contest/moss.html:43 templates/problem/list.html:204
@@ -176,7 +176,7 @@ msgstr "Đánh dấu các kỳ thi là ẩn"
 #, python-format
 msgid "%d contest successfully locked."
 msgid_plural "%d contests successfully locked."
-msgstr[0] "Đã khóa %d cuộc thi thành công."
+msgstr[0] "Đã khóa %d lớp học thành công."
 
 #: judge/admin/contest.py:232
 msgid "Lock contest submissions"
@@ -186,7 +186,7 @@ msgstr "khóa bài thi"
 #, python-format
 msgid "%d contest successfully unlocked."
 msgid_plural "%d contests successfully unlocked."
-msgstr[0] "Mở khóa %d cuộc thi thành công."
+msgstr[0] "Mở khóa %d lớp học thành công."
 
 #: judge/admin/contest.py:241
 msgid "Unlock contest submissions"
@@ -511,7 +511,7 @@ msgstr ""
 
 #: judge/forms.py:45
 msgid "Subscribe to contest updates"
-msgstr "Đăng ký để nhận các cập nhật về cuộc thi"
+msgstr "Đăng ký để nhận các cập nhật về lớp học"
 
 #: judge/forms.py:46
 msgid "Enable experimental features"
@@ -599,7 +599,7 @@ msgstr "Mã bài tập đã tồn tại."
 
 #: judge/forms.py:273 judge/models/contest.py:66
 msgid "Contest id must be ^[a-z0-9]+$"
-msgstr "id cuộc thi phải bao gồm ^[a-z0-9] + $"
+msgstr "id lớp học phải bao gồm ^[a-z0-9] + $"
 
 #: judge/forms.py:278
 msgid "Contest with key already exists."
@@ -720,11 +720,11 @@ msgstr "mô tả thẻ"
 
 #: judge/models/contest.py:52
 msgid "contest tag"
-msgstr "thẻ cuộc thi"
+msgstr "thẻ lớp học"
 
 #: judge/models/contest.py:53 judge/models/contest.py:117
 msgid "contest tags"
-msgstr "thẻ cuộc thi"
+msgstr "thẻ lớp học"
 
 #: judge/models/contest.py:61
 msgid "Visible"
@@ -740,15 +740,15 @@ msgstr ""
 
 #: judge/models/contest.py:65
 msgid "contest id"
-msgstr "mã Id cuộc thi"
+msgstr "mã Id lớp học"
 
 #: judge/models/contest.py:67
 msgid "contest name"
-msgstr "tên cuộc thi"
+msgstr "tên lớp học"
 
 #: judge/models/contest.py:68
 msgid "These people will be able to edit the contest."
-msgstr "Những người này sẽ có thể chỉnh sửa các cuộc thi."
+msgstr "Những người này sẽ có thể chỉnh sửa các lớp học."
 
 #: judge/models/contest.py:70 judge/models/runtime.py:136
 msgid "description"
@@ -778,19 +778,19 @@ msgstr "công khai"
 
 #: judge/models/contest.py:76
 msgid "Should be set even for organization-private contests, where it determines whether the contest is visible to members of the specified organizations."
-msgstr "Nên được đặt ngay cả đối với các cuộc thi riêng, nơi nó sẽ xác định xem các cuộc thi chỉ được nhìn thấy bởi các thành viên của tổ chức này."
+msgstr "Nên được đặt ngay cả đối với các lớp học riêng, nơi nó sẽ xác định xem các lớp học chỉ được nhìn thấy bởi các thành viên của tổ chức này."
 
 #: judge/models/contest.py:79
 msgid "contest rated"
-msgstr "cuộc thi đã được xếp hạng"
+msgstr "lớp học đã được xếp hạng"
 
 #: judge/models/contest.py:79
 msgid "Whether this contest can be rated."
-msgstr "Cho dù cuộc thi này có thể được đánh giá cao."
+msgstr "Cho dù lớp học này có thể được đánh giá cao."
 
 #: judge/models/contest.py:81
 msgid "view contest scoreboard"
-msgstr "Xem bảng điểm cuộc thi"
+msgstr "Xem bảng điểm lớp học"
 
 #: judge/models/contest.py:83
 msgid "These users will be able to view the scoreboard."
@@ -814,11 +814,11 @@ msgstr "Đừng comment mà hãy sử dụng hệ thống giải đáp thắc m�
 
 #: judge/models/contest.py:90
 msgid "Rating floor for contest"
-msgstr "Xếp loại thấp nhất cho cuộc thi"
+msgstr "Xếp loại thấp nhất cho lớp học"
 
 #: judge/models/contest.py:92
 msgid "Rating ceiling for contest"
-msgstr "Xếp loại cao nhất cho cuộc thi"
+msgstr "Xếp loại cao nhất cho lớp học"
 
 #: judge/models/contest.py:94
 msgid "rate all"
@@ -858,7 +858,7 @@ msgstr "chỉ chạy các phép thử trước"
 
 #: judge/models/contest.py:105
 msgid "Whether judges should grade pretests only, versus all testcases. Commonly set during a contest, then unset prior to rejudging user submissions when the contest ends."
-msgstr "Chỉ chấm bài thử. Thường sử dụng trong các cuộc thi, sau đó bỏ để chấm lại các bài chấm ở cuối cuộc thi."
+msgstr "Chỉ chấm bài thử. Thường sử dụng trong các lớp học, sau đó bỏ để chấm lại các bài chấm ở cuối lớp học."
 
 #: judge/models/contest.py:109 judge/models/problem.py:166
 msgid "private to organizations"
@@ -871,7 +871,7 @@ msgstr "tổ chức"
 
 #: judge/models/contest.py:111
 msgid "If private, only these organizations may see the contest"
-msgstr "Nếu là dành riêng, thì chỉ các tổ chức này mới có thể xem cuộc thi"
+msgstr "Nếu là dành riêng, thì chỉ các tổ chức này mới có thể xem lớp học"
 
 #: judge/models/contest.py:112 judge/models/problem.py:153
 msgid "OpenGraph image"
@@ -891,7 +891,7 @@ msgstr "số lượng người tham gia trực tiếp"
 
 #: judge/models/contest.py:119
 msgid "contest summary"
-msgstr "tổng kết cuộc thi"
+msgstr "tổng kết lớp học"
 
 #: judge/models/contest.py:120 judge/models/problem.py:155
 msgid "Plain-text, shown in meta description tag, e.g. for social media."
@@ -931,11 +931,11 @@ msgstr "Một đối tượng JSON dùng để chọn cấu hình định dạng
 
 #: judge/models/contest.py:136
 msgid "contest lock"
-msgstr "Khóa cuộc thi."
+msgstr "Khóa lớp học."
 
 #: judge/models/contest.py:137
 msgid "Prevent submissions from this contest from being rejudged."
-msgstr "Không cho các bài nộp của cuộc thi này chấm lại"
+msgstr "Không cho các bài nộp của lớp học này chấm lại"
 
 #: judge/models/contest.py:138
 msgid "precision points"
@@ -979,7 +979,7 @@ msgstr "Tạo kỳ thi riêng tư"
 
 #: judge/models/contest.py:370
 msgid "Change contest visibility"
-msgstr "Chỉnh tính công khai của cuộc thi"
+msgstr "Chỉnh tính công khai của lớp học"
 
 #: judge/models/contest.py:371
 msgid "Edit contest problem label script"
@@ -993,15 +993,15 @@ msgstr ""
 #: judge/models/contest.py:510 judge/models/contest.py:532
 #: judge/models/submission.py:84
 msgid "contest"
-msgstr "cuộc thi"
+msgstr "lớp học"
 
 #: judge/models/contest.py:375
 msgid "contests"
-msgstr "cuộc thi"
+msgstr "lớp học"
 
 #: judge/models/contest.py:382
 msgid "associated contest"
-msgstr "cuộc thi liên quan"
+msgstr "lớp học liên quan"
 
 #: judge/models/contest.py:385
 msgid "score"
@@ -1052,11 +1052,11 @@ msgstr "%s trong %s"
 
 #: judge/models/contest.py:464
 msgid "contest participation"
-msgstr "tham gia cuộc thi"
+msgstr "tham gia lớp học"
 
 #: judge/models/contest.py:465
 msgid "contest participations"
-msgstr "tham gia cuộc thi"
+msgstr "tham gia lớp học"
 
 #: judge/models/contest.py:471 judge/models/contest.py:494
 #: judge/models/contest.py:533 judge/models/problem.py:430
@@ -1096,11 +1096,11 @@ msgstr "Tại sao bạn không thể nộp bài cho một bài tập?"
 
 #: judge/models/contest.py:487
 msgid "contest problem"
-msgstr "đề bài của cuộc thi"
+msgstr "đề bài của lớp học"
 
 #: judge/models/contest.py:488
 msgid "contest problems"
-msgstr "đề bài của cuộc thi"
+msgstr "đề bài của lớp học"
 
 #: judge/models/contest.py:492 judge/models/submission.py:207
 msgid "submission"
@@ -1140,11 +1140,11 @@ msgstr "lần xếp hạng cuối"
 
 #: judge/models/contest.py:520
 msgid "contest rating"
-msgstr "xếp hạng cuộc thi"
+msgstr "xếp hạng lớp học"
 
 #: judge/models/contest.py:521
 msgid "contest ratings"
-msgstr "xếp hạng cuộc thi"
+msgstr "xếp hạng lớp học"
 
 #: judge/models/contest.py:540
 msgid "contest moss result"
@@ -1691,7 +1691,7 @@ msgstr "Tên tổ chức thể hiện trong URL"
 
 #: judge/models/profile.py:42
 msgid "Displayed beside user name during contests"
-msgstr "Hiển thị bên cạnh tên trong cuộc thi"
+msgstr "Hiển thị bên cạnh tên trong lớp học"
 
 #: judge/models/profile.py:43
 msgid "organization description"
@@ -1817,7 +1817,7 @@ msgstr "JavaScript tự định nghĩa để tùy chỉnh trang web"
 
 #: judge/models/profile.py:113
 msgid "current contest"
-msgstr "cuộc thi hiện tại"
+msgstr "lớp học hiện tại"
 
 #: judge/models/profile.py:115
 msgid "math engine"
@@ -2362,7 +2362,7 @@ msgstr ""
 
 #: judge/tasks/contest.py:19
 msgid "Recalculating contest scores"
-msgstr "Đang tính lại điểm của cuộc thi"
+msgstr "Đang tính lại điểm của lớp học"
 
 #: judge/tasks/contest.py:40
 msgid "Running MOSS"
@@ -2501,25 +2501,25 @@ msgstr "Đang chỉnh sửa bình luận"
 #: judge/views/contests.py:56 judge/views/contests.py:201
 #: judge/views/contests.py:204 judge/views/contests.py:382
 msgid "No such contest"
-msgstr "Không có cuộc thi như vậy"
+msgstr "Không có lớp học như vậy"
 
 #: judge/views/contests.py:57 judge/views/contests.py:202
 #, python-format
 msgid "Could not find a contest with the key \"%s\"."
-msgstr "Không thể tìm thấy một cuộc thi với khóa \"%s\"."
+msgstr "Không thể tìm thấy một lớp học với khóa \"%s\"."
 
 #: judge/views/contests.py:70
 msgid "Contests"
-msgstr "Cuộc thi"
+msgstr "Lớp học"
 
 #: judge/views/contests.py:205
 msgid "Could not find such contest."
-msgstr "Không thể tìm thấy các cuộc thi như vậy."
+msgstr "Không thể tìm thấy các lớp học như vậy."
 
 #: judge/views/contests.py:208
 #, python-format
 msgid "Access to contest \"%s\" denied"
-msgstr "Truy cập vào cuộc thi \"%s\" từ chối"
+msgstr "Truy cập vào lớp học \"%s\" từ chối"
 
 #: judge/views/contests.py:235
 msgid "Clone Contest"
@@ -2527,7 +2527,7 @@ msgstr ""
 
 #: judge/views/contests.py:301
 msgid "Contest not ongoing"
-msgstr "Cuộc thi không đang diễn ra"
+msgstr "Lớp học không đang diễn ra"
 
 #: judge/views/contests.py:302
 #, python-format
@@ -2536,12 +2536,12 @@ msgstr "\"%s\" không đang diễn ra."
 
 #: judge/views/contests.py:306
 msgid "Already in contest"
-msgstr "Đang trong cuộc thi"
+msgstr "Đang trong lớp học"
 
 #: judge/views/contests.py:307
 #, python-format
 msgid "You are already in a contest: \"%s\"."
-msgstr "Bạn đang ở một cuộc thi: \"%s\"."
+msgstr "Bạn đang ở một lớp học: \"%s\"."
 
 #: judge/views/contests.py:310
 msgid "Banned from joining"
@@ -2559,7 +2559,7 @@ msgstr "Nhập mã đăng nhập cho %s"
 #: judge/views/contests.py:383
 #, python-format
 msgid "You are not in contest \"%s\"."
-msgstr "Bạn đang không tham gia cuộc thi \"%s\"."
+msgstr "Bạn đang không tham gia lớp học \"%s\"."
 
 #: judge/views/contests.py:402
 msgid "ContestCalendar requires integer year and month"
@@ -2568,7 +2568,7 @@ msgstr "Lịch của Contest yêu cầu là năm và tháng là số nguyên"
 #: judge/views/contests.py:442
 #, python-format
 msgid "Contests in %(month)s"
-msgstr "Cuộc thi tại %(month)s"
+msgstr "Lớp học tại %(month)s"
 
 #: judge/views/contests.py:442
 msgid "F Y"
@@ -2619,7 +2619,7 @@ msgstr "Đang chạy MOSS cho %s..."
 #: judge/views/contests.py:800
 #, python-format
 msgid "Contest tag: %s"
-msgstr "Thẻ cuộc thi %s"
+msgstr "Thẻ lớp học %s"
 
 #: judge/views/error.py:14
 msgid "404 error"
@@ -2876,7 +2876,7 @@ msgstr "Các giải pháp tốt nhất cho %(problem)s trong %(contest)s"
 #: judge/views/ranked_submission.py:83
 #, python-format
 msgid "Best solutions for problem %(number)s in %(contest)s"
-msgstr "Những lời giải tốt nhất cho bài %(number)s trong cuộc thi %(contest)s"
+msgstr "Những lời giải tốt nhất cho bài %(number)s trong lớp học %(contest)s"
 
 #: judge/views/ranked_submission.py:89
 #, python-brace-format
@@ -2969,7 +2969,7 @@ msgstr "bài nộp của %(user)s cho %(problem)s"
 
 #: judge/views/submission.py:536
 msgid "Must pass a contest"
-msgstr "Phải vượt qua một cuộc thi"
+msgstr "Phải vượt qua một lớp học"
 
 #: judge/views/submission.py:544
 #, python-format
@@ -3133,7 +3133,7 @@ msgstr ""
 
 #: judge/views/user.py:443 templates/user/user-list-tabs.html:4
 msgid "Leaderboard"
-msgstr "Leaderboard"
+msgstr "Bảng xếp hạng"
 
 #: judge/views/user.py:504
 msgid "You have been successfully logged out."
@@ -3159,7 +3159,7 @@ msgstr "Đánh giá"
 
 #: templates/admin/judge/contest/change_list.html:9
 msgid "Rate all ratable contests"
-msgstr "Đánh giá các cuộc thi"
+msgstr "Đánh giá các lớp học"
 
 #: templates/admin/judge/judge/change_form.html:15
 #: templates/admin/judge/judge/change_form.html:18
@@ -3253,7 +3253,7 @@ msgstr "Blog"
 
 #: templates/blog/list.html:87
 msgid "Events"
-msgstr "Sự kiện"
+msgstr "Lớp học"
 
 #: templates/blog/list.html:92
 msgid "News"
@@ -3274,11 +3274,11 @@ msgstr "Chưa có lời làm rõ nào được đưa ra ở thời điểm này.
 
 #: templates/blog/list.html:154
 msgid "Ongoing contests"
-msgstr "Cuộc thi đang diễn ra"
+msgstr "Lớp học đang diễn ra"
 
 #: templates/blog/list.html:172
 msgid "Upcoming contests"
-msgstr "Sự kiện sắp tới"
+msgstr "Lớp học sắp tới"
 
 #: templates/blog/list.html:189
 msgid "Comment stream"
@@ -3484,7 +3484,7 @@ msgstr "Nhân bản"
 #: templates/contest/contest-tabs.html:38
 #: templates/contest/contest-tabs.html:58
 msgid "Leave contest"
-msgstr "Rời khỏi cuộc thi"
+msgstr "Rời khỏi lớp học"
 
 #: templates/contest/contest-tabs.html:45 templates/contest/list.html:294
 msgid "Virtual join"
@@ -3496,11 +3496,11 @@ msgstr "Ngừng theo dõi"
 
 #: templates/contest/contest-tabs.html:65
 msgid "Spectate contest"
-msgstr "Theo dõi cuộc thi"
+msgstr "Theo dõi lớp học"
 
 #: templates/contest/contest-tabs.html:72
 msgid "Join contest"
-msgstr "Tham gia cuộc thi"
+msgstr "Tham gia lớp học"
 
 #: templates/contest/contest-tabs.html:81
 msgid "Log in to participate"
@@ -3512,7 +3512,7 @@ msgstr "Đang tham gia ảo."
 
 #: templates/contest/contest.html:43
 msgid "Contest is over."
-msgstr "Cuộc thi kết thúc."
+msgstr "Lớp học kết thúc."
 
 #: templates/contest/contest.html:59 templates/contest/contest.html:63
 msgid "F j, Y, G:i T"
@@ -3552,7 +3552,7 @@ msgstr "Bạn có chắc bạn muốn tham gia?"
 
 #: templates/contest/list.html:32
 msgid "Joining a contest for the first time starts your timer, after which it becomes unstoppable."
-msgstr "Truy cập vào một cuộc thi lần đầu tiên sẽ bắt đầu việc đếm ngược thời gian cuộc thi và không thể dừng lại được."
+msgstr "Truy cập vào một lớp học lần đầu tiên sẽ bắt đầu việc đếm ngược thời gian lớp học và không thể dừng lại được."
 
 #: templates/contest/list.html:65
 msgid "hidden"
@@ -3576,28 +3576,28 @@ msgstr "Tham gia"
 
 #: templates/contest/list.html:147
 msgid "Active Contests"
-msgstr "Các cuộc thi đang diễn ra"
+msgstr "Các lớp học đang diễn ra"
 
 #: templates/contest/list.html:151 templates/contest/list.html:193
 #: templates/contest/list.html:231 templates/contest/list.html:268
 msgid "Contest"
-msgstr "Cuộc thi"
+msgstr "Lớp học"
 
 #: templates/contest/list.html:189
 msgid "Ongoing Contests"
-msgstr "Cuộc thi đang diễn ra"
+msgstr "Lớp học đang diễn ra"
 
 #: templates/contest/list.html:226
 msgid "Upcoming Contests"
-msgstr "Sự kiện sắp tới"
+msgstr "Lớp học sắp tới"
 
 #: templates/contest/list.html:254
 msgid "There are no scheduled contests at this time."
-msgstr "Không có không có cuộc thi dự kiến tại thời điểm này."
+msgstr "Không có không có lớp học dự kiến tại thời điểm này."
 
 #: templates/contest/list.html:260
 msgid "Past Contests"
-msgstr "Cuộc thi đã qua"
+msgstr "Lớp học đã qua"
 
 #: templates/contest/media-js.html:4
 msgid "Are you sure you want to leave?"
@@ -3609,11 +3609,11 @@ msgstr "Bạn không thể trở lại với việc tham gia ảo. Bạn phải 
 
 #: templates/contest/media-js.html:10
 msgid "Joining a contest starts your timer, after which it becomes unstoppable."
-msgstr "Truy cập một cuộc thi sẽ bắt đầu đếm ngược thời gian cuộc thi đó, và không thể dừng lại được."
+msgstr "Truy cập một lớp học sẽ bắt đầu đếm ngược thời gian lớp học đó, và không thể dừng lại được."
 
 #: templates/contest/moss.html:28
 msgid "Are you sure you want MOSS the contest?"
-msgstr "Bạn có muốn MOSS cuộc thi này?"
+msgstr "Bạn có muốn MOSS lớp học này?"
 
 #: templates/contest/moss.html:33
 msgid "Are you sure you want to delete the MOSS results?"
@@ -3625,7 +3625,7 @@ msgstr "Không có bài nộp"
 
 #: templates/contest/moss.html:74
 msgid "Re-MOSS contest"
-msgstr "MOSS lại cuộc thi."
+msgstr "MOSS lại lớp học."
 
 #: templates/contest/moss.html:82
 msgid "Delete MOSS results"
@@ -3633,7 +3633,7 @@ msgstr "Xóa các kết quả MOSS"
 
 #: templates/contest/private.html:5
 msgid "This contest is private to specific users."
-msgstr "Cuộc thi này chỉ dành riêng cho một số người dùng."
+msgstr "Lớp học này chỉ dành riêng cho một số người dùng."
 
 #: templates/contest/private.html:10
 msgid "Additionally, only the following organizations may access this contest:"
@@ -3641,7 +3641,7 @@ msgstr ""
 
 #: templates/contest/private.html:12
 msgid "Only the following organizations may access this contest:"
-msgstr "Chỉ có các tổ chức sau có thể truy cập vào cuộc thi này:"
+msgstr "Chỉ có các tổ chức sau có thể truy cập vào lớp học này:"
 
 #: templates/contest/ranking-table.html:7
 msgid "Organization"
@@ -4361,7 +4361,7 @@ msgstr "Tổ chức đại diện"
 #: templates/registration/registration_form.html:190
 #: templates/user/edit-profile.html:324
 msgid "Notify me about upcoming contests"
-msgstr "Thông báo cho tôi về các cuộc thi sắp tới"
+msgstr "Thông báo cho tôi về các lớp học sắp tới"
 
 #: templates/registration/registration_form.html:204
 msgid "By registering, you agree to our"
@@ -4374,6 +4374,8 @@ msgstr "Điều khoản & Điều kiện"
 #: templates/registration/registration_form.html:208
 msgid "Register!"
 msgstr "Đăng ký!"
+msgid "Register"
+msgstr "Đăng ký"
 
 #: templates/registration/totp_disable.html:38
 msgid "To protect your account, you must first authenticate before you can disable Two Factor Authentication."
@@ -4986,7 +4988,7 @@ msgstr "Tổng điểm:"
 #, python-format
 msgid "%(counter)s contest written"
 msgid_plural "%(counter)s contests written"
-msgstr[0] "Số lượng cuộc thi đã viết %(counter)s"
+msgstr[0] "Số lượng lớp học đã viết %(counter)s"
 
 #: templates/user/user-base.html:74
 msgid "Rank by rating:"

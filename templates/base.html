@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ LANGUAGE_CODE }}">
 <head>
-    <title>{% block title %}{{ title }} - {{ SITE_LONG_NAME }}{% endblock %}</title>
+    <title>{% block title %}{{ _(title) }} - {{ SITE_LONG_NAME }}{% endblock %}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     {% if misc_config.meta_keywords %}
         <meta name="keywords" content="{{ misc_config.meta_keywords }}">
@@ -271,7 +271,7 @@
         {% block title_row %}
             <h2 style="color:#393630; display:inline">
                 {% block content_title %}
-                    {% if content_title %}{{ content_title }}{% else %}{{ title }}{% endif %}
+                    {% if content_title %}{{ _(content_title) }}{% else %}{{ _(title) }}{% endif %}
                 {% endblock %}
             </h2>
         {% endblock %}
@@ -291,7 +291,7 @@
     <footer>
         <span id="footer-content">
             <br>
-            <a style="color: #808080" href="https://dmoj.ca">proudly powered by <b>DMOJ</b></a> |
+            <a style="color: #808080" href="https://dmoj.ca">proudly powered by <b>Ahihi</b></a> |
             {% if i18n_config.footer %}
                 {{ i18n_config.footer|safe }} |
             {% endif %}
