@@ -79,7 +79,14 @@ class ContestList(QueryStringSortMixin, DiggPaginatorMixin, TitleMixin, ContestL
         return timezone.now()
 
     def _get_queryset(self):
-        return super().get_queryset().prefetch_related('tags', 'organizations', 'authors', 'curators', 'testers')
+        qs = super().get_queryset().prefetch_related('tags', 'organizations', 'authors', 'curators', 'testers')
+        if 'search' in self.request.GET:
+            query = ' '.join(self.request.GET.getlist('search')).strip()
+            if query:
+                qs = qs.filter(name__icontains=query)
+
+        return qs
+
 
     def get_queryset(self):
         return self._get_queryset().order_by(self.order, 'key').filter(end_time__lt=self._now)
