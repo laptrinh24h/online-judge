@@ -174,6 +174,11 @@ class Problem(models.Model):
     submission_source_visibility_mode = models.CharField(verbose_name=_('submission source visibility'), max_length=1,
                                                          default=SubmissionSourceAccess.FOLLOW,
                                                          choices=SUBMISSION_SOURCE_ACCESS)
+    PRICING_FREE = 1
+    PRICING_PREM = 2
+    PRICING_PLUS = 3
+    PRICING_CHOICES = ((PRICING_FREE, 'Free'), (PRICING_PREM, 'Premium'), (PRICING_PLUS, 'Premium+'))
+    pricing = models.SmallIntegerField(verbose_name=_('Pricing'), default=1, choices=PRICING_CHOICES)
 
     objects = TranslatedProblemQuerySet.as_manager()
     tickets = GenericRelation('Ticket')

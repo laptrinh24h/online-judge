@@ -135,10 +135,10 @@ STATIC_ROOT = './static'
 ############################################
 
 ## DMOJ site display settings.
-SITE_NAME = 'DMOJ'
-SITE_LONG_NAME = 'DMOJ: Modern Online Judge'
+SITE_NAME = 'laptrinh24h.vn'
+SITE_LONG_NAME = 'Lập trình 24h'
 SITE_ADMIN_EMAIL = 'admin@example.com'
-TERMS_OF_SERVICE_URL = '//dmoj.ca/tos' # Use a flatpage.
+# TERMS_OF_SERVICE_URL = '//dmoj.ca/tos' # Use a flatpage.
 
 ## Bridge controls.
 # The judge connection address and port; where the judges will connect to the site.

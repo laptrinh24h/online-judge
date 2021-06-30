@@ -5056,3 +5056,6 @@ msgstr "Hồ sơ Admin"
 msgid "Check all"
 msgstr "Chọn tất cả"
 
+#: laptrinh24h.vn
+msgid "Pricing"
+msgstr "Trả phí"
