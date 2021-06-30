@@ -900,7 +900,18 @@ img.inline-math {
   text-align: left;
   padding-left: 1em;
   width: 100%;
+  color: limegreen;
 }
+#problem-table td.pricing1 {
+  color: limegreen;
+}
+#problem-table td.pricing2 {
+  color: red;
+}
+#problem-table td.pricing3 {
+  color: orange;
+}
+
 #problem-table td.pp {
   text-align: left;
   padding-left: 1em;

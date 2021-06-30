@@ -224,6 +224,11 @@ class Problem(models.Model):
 
         # Problem is public.
         if self.is_public:
+            if self.pricing != self.PRICING_FREE:
+                if user.profile.pricing != self.PRICING_FREE:
+                    return True
+                return False
+
             # Problem is not private to an organization.
             if not self.is_organization_private:
                 return True

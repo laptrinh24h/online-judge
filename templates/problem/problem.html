@@ -112,9 +112,20 @@
             <div class="no-submissions-left submissions-left">{{ _('0 submissions left') }}</div>
         {% endif %}
     {% else %}
-        <a href="{{ url('problem_submit', problem.code) }}" class="unselectable button full">
-            {{ _('Submit solution') }}
-        </a>
+        {% if problem.pricing == 1 or request.user.pricing == 2 %}
+            <a href="{{ url('problem_submit', problem.code) }}" class="unselectable button full">
+                {{ _('Submit solution') }}
+            </a>
+        {% else %}
+            <a class="unselectable button full disabled">{{ _('Submit solution') }}</a>
+            <div></div>
+            <a class="no-submissions-left submissions-left"
+               style="align-content: center"
+               href="/about/"
+            >
+                Mua khoá học để gửi lời giải. Click để tới trang hướng dẫn
+            </a>
+        {% endif %}
     {% endif %}
 
     <hr style="padding-bottom: 0.3em">
