@@ -112,7 +112,7 @@
             <div class="no-submissions-left submissions-left">{{ _('0 submissions left') }}</div>
         {% endif %}
     {% else %}
-        {% if problem.pricing == 1 or request.user.pricing == 2 %}
+        {% if problem.pricing == 1 or not request.user.is_authenticated or (problem.pricing >= 2 and request.user.profile.pricing == 2) %}
             <a href="{{ url('problem_submit', problem.code) }}" class="unselectable button full">
                 {{ _('Submit solution') }}
             </a>
