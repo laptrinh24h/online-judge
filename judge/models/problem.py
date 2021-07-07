@@ -212,7 +212,7 @@ class Problem(models.Model):
             (user.profile.id in self.editor_ids or
                 self.is_organization_private and self.organizations.filter(admins=user.profile).exists())
 
-    def is_accessible_by(self, user, skip_contest_problem_check=False):
+    def is_accessible_by(self, user, skip_contest_problem_check=False, **kwargs):
         # If we don't want to check if the user is in a contest containing that problem.
         if not skip_contest_problem_check and user.is_authenticated:
             # If user is currently in a contest containing that problem.
@@ -224,8 +224,12 @@ class Problem(models.Model):
 
         # Problem is public.
         if self.is_public:
-            if self.pricing != self.PRICING_FREE:
-                if user.profile.pricing != self.PRICING_FREE:
+            if self.pricing == self.PRICING_PREM:
+                if hasattr(user, 'profile') and user.profile.pricing != self.PRICING_FREE:
+                    return True
+                return False
+            if self.pricing == self.PRICING_PLUS:
+                if kwargs.get('view_only', False):
                     return True
                 return False
 

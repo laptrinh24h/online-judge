@@ -834,7 +834,7 @@ msgstr "không xếp hạng"
 
 #: judge/models/contest.py:97
 msgid "private to specific users"
-msgstr "riêng tu cho thành viên cụ thể"
+msgstr "riêng tư cho thành viên cụ thể"
 
 #: judge/models/contest.py:98
 msgid "private contestants"
@@ -850,7 +850,7 @@ msgstr "ẩn các thẻ đầu bài"
 
 #: judge/models/contest.py:102
 msgid "Whether problem tags should be hidden by default."
-msgstr "Cho dù vấn đề tags nên được ẩn theo mặc định."
+msgstr "Liệt rằng tags của đề bài nên được ẩn theo mặc định."
 
 #: judge/models/contest.py:104
 msgid "run pretests only"
@@ -1063,7 +1063,7 @@ msgstr "tham gia lớp học"
 #: judge/models/problem.py:435 judge/models/problem.py:453
 #: judge/models/problem_data.py:35
 msgid "problem"
-msgstr "vấn đề"
+msgstr "đề bài"
 
 #: judge/models/contest.py:473 judge/models/contest.py:498
 #: judge/models/problem.py:137
@@ -1277,11 +1277,11 @@ msgstr "phân loại đề bài"
 
 #: judge/models/problem.py:43
 msgid "problem type"
-msgstr "kiểu vấn đề"
+msgstr "kiểu đề bài"
 
 #: judge/models/problem.py:44 judge/models/problem.py:121
 msgid "problem types"
-msgstr "kiểu vấn đề"
+msgstr "kiểu đề bài"
 
 #: judge/models/problem.py:48
 msgid "problem group ID"
@@ -2753,7 +2753,7 @@ msgstr "Thành viên mà bạn muốn loại không thuộc tổ chức: %s."
 
 #: judge/views/problem.py:67
 msgid "No such problem"
-msgstr "Không có vấn đề như vậy"
+msgstr "Không có đề bài như vậy"
 
 #: judge/views/problem.py:68
 #, python-format
@@ -3560,7 +3560,7 @@ msgstr "ẩn"
 
 #: templates/contest/list.html:78
 msgid "private"
-msgstr "cá nhân"
+msgstr "riêng tư"
 
 #: templates/contest/list.html:83
 msgid "rated"

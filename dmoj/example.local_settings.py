@@ -10,7 +10,7 @@
 # SECURITY WARNING: keep the secret key used in production secret!
 # You may use <http://www.miniwebtool.com/django-secret-key-generator/>
 # to generate this key.
-SECRET_KEY = 'This key is not very secure and you should change it.'
+SECRET_KEY = 'awdawdawdadawdawdawdawdThis key is not very secure and you should change it.'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True  # Change to False once you are done with runserver testing.
@@ -264,14 +264,14 @@ LOGGING = {
     },
     'handlers': {
         # You may use this handler as example for logging to other files..
-        'bridge': {
-            'level': 'INFO',
-            'class': 'logging.handlers.RotatingFileHandler',
-            'filename': '<desired bridge log path>',
-            'maxBytes': 10 * 1024 * 1024,
-            'backupCount': 10,
-            'formatter': 'file',
-        },
+        # 'bridge': {
+        #     'level': 'INFO',
+        #     'class': 'logging.handlers.RotatingFileHandler',
+        #     'filename': '<desired bridge log path>',
+        #     'maxBytes': 10 * 1024 * 1024,
+        #     'backupCount': 10,
+        #     'formatter': 'file',
+        # },
         'mail_admins': {
             'level': 'ERROR',
             'class': 'dmoj.throttle_mail.ThrottledEmailHandler',
@@ -291,7 +291,7 @@ LOGGING = {
         },
         # Judging logs as received by bridged.
         'judge.bridge': {
-            'handlers': ['bridge', 'mail_admins'],
+            'handlers': ['mail_admins'],
             'level': 'INFO',
             'propagate': True,
         },
