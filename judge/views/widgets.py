@@ -2,6 +2,7 @@ import json
 import os
 import uuid
 from urllib.parse import urljoin
+from django.http import FileResponse
 
 import requests
 from django.conf import settings
@@ -100,3 +101,10 @@ def martor_image_uploader(request):
     else:
         data = imgur_uploader(image)
     return HttpResponse(data, content_type='application/json')
+
+
+def mator_image_view(request, slug):
+    try:
+        return FileResponse(open(os.path.join(settings.MARTOR_UPLOAD_MEDIA_DIR, slug), 'rb'))
+    except Exception:
+        raise Http404()

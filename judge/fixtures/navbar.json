@@ -130,7 +130,7 @@
     {
         "fields": {
             "domain": "localhost:8000",
-            "name": "DMOJ: Modern Online Judge"
+            "name": "Lập trình 24h"
         },
         "model": "sites.site",
         "pk": 1
