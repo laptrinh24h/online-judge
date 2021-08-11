@@ -108,7 +108,7 @@ body {
     position: relative;
     min-height: 100%;
     margin: 0 auto;
-    max-width: 107em;
+    max-width: 100%;
     font-size: $base_font_size;
     line-height: 1.231;
     background: $background_light_gray;
@@ -466,7 +466,7 @@ noscript #noscript {
 
 #nav-placeholder {
     height: 47px;
-    max-width: 107em;
+    max-width: 100%;
     background: white;
     border-right: 1px solid $border_gray;
     border-left: 1px solid $border_gray;
