@@ -19,7 +19,7 @@ Install following the docs: https://docs.dmoj.ca/#/judge/setting_up_a_judge
 ### Languages
 ```bash
 # Python2
-sudo apt install python2
+sudo apt install -y python2
 
 # Javascript
 https://github.com/DMOJ/v8dmoj
@@ -37,18 +37,18 @@ deb [arch=amd64] https://apt.dmoj.ca/ stretch main non-free
 # then run
 curl https://dmoj.ca/dmoj-apt.key | sudo apt-key add -
 sudo apt update
-sudo apt install v8dmoj
+sudo apt install -y v8dmoj
 
 # Java
-sudo apt-get install openjdk-8-jdk
+sudo apt-get install -y openjdk-8-jdk
 
 # C-Sharp
 sudo apt update
-sudo apt install dirmngr gnupg apt-transport-https ca-certificates
+sudo apt install -y dirmngr gnupg apt-transport-https ca-certificates
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
 sudo sh -c 'echo "deb https://download.mono-project.com/repo/ubuntu stable-bionic main" > /etc/apt/sources.list.d/mono-official-stable.list'
 sudo apt update
-sudo apt install mono-complete
+sudo apt install -y mono-complete
 # mono -V
 # sudo apt install monodevelop
 # mcs -v
