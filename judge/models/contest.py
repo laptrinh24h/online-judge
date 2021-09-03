@@ -363,6 +363,8 @@ class Contest(models.Model):
 
     @classmethod
     def get_visible_contests(cls, user):
+        return cls.objects.filter(is_visible=True, is_organization_private=False) \
+            .defer('description').distinct()
         if not user.is_authenticated:
             return cls.objects.filter(is_visible=True, is_organization_private=False) \
                               .defer('description').distinct()

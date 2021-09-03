@@ -380,6 +380,9 @@ class ContestJoin(LoginRequiredMixin, ContestMixin, BaseDetailView):
     def ask_for_access_code(self, form=None):
         contest = self.object
         wrong_code = False
+        if contest.access_code == '':
+            return self.join_contest(self.request, '')
+        
         if form:
             if form.is_valid():
                 if form.cleaned_data['access_code'] == contest.access_code:
